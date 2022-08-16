@@ -233,7 +233,7 @@ export default function Update() {
             
 
  
-            coverPicture Update
+            {/* coverPicture Update
            <form className="loginBox" >
           
     <input
@@ -250,7 +250,7 @@ export default function Update() {
             Update
             </button>
             
-          </form>
+          </form> */}
 
           Basic Information Update
           <form className="loginBox" >

@@ -103,7 +103,7 @@ const io = require("socket.io")(server, {
   
   io.on("connection", (socket) => {
     //when ceonnect
-    // console.log("a user connected.");
+    console.log("a user connected.");
   
     //take userId and socketId from user
     socket.on("addUser", (userid) => {
@@ -114,8 +114,8 @@ const io = require("socket.io")(server, {
     //send and get message
     socket.on("sendMessage", ({ senderId, receiverId, text }) => {
       const user = getUser(receiverId);
-     if(user)
-     {
+    //  if(user)
+    //  {
 
       
       io.to(user.socketId).emit("getMessage", {
@@ -123,7 +123,7 @@ const io = require("socket.io")(server, {
         text,
       });
 
-    }
+    // }
     });
   
     //when disconnect

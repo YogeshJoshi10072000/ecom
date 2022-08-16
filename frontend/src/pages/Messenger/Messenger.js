@@ -18,9 +18,10 @@ export default function Messenger() {
   const socket = useRef();
   const { user } = useContext(AuthContext);
   const scrollRef = useRef();
-const PORT=process.env.PORT||4000;
+// var PORT=process.env.PORT;
+// alert(PORT+"porting");
   useEffect(() => {
-    socket.current = io(`ws://localhost:${PORT}`);
+    socket.current = io(`https://yogesh-joshi-social-media-app.herokuapp.com/`);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,
